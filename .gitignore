@@ -1,0 +1,61 @@
+# ============================================
+# qirsh-wallet .gitignore
+# Language-specific rules will be added once the stack is chosen (Stage 2).
+# ============================================
+
+# ---------- Secrets (NEVER commit) ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials*.json
+
+# ---------- Local databases & Docker volumes ----------
+*.sqlite
+*.sqlite3
+*.db
+pgdata/
+data/
+docker-volumes/
+
+# ---------- Logs & dumps ----------
+*.log
+logs/
+*.dump
+*.sql.gz
+
+# ---------- Build & dependency output ----------
+node_modules/
+dist/
+build/
+out/
+target/
+__pycache__/
+*.pyc
+.venv/
+venv/
+bin/
+obj/
+
+# ---------- Test & coverage ----------
+coverage/
+.coverage
+htmlcov/
+.pytest_cache/
+*.lcov
+load-tests/results/
+
+# ---------- Editors & OS ----------
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---------- Claude Code local settings ----------
+.claude/settings.local.json
